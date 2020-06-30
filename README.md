@@ -1,6 +1,6 @@
 Open VSCode and create a new blank ionic project, add mongoNode folder and replace src folder. 
 
-In terminal, navigate to mongoNode and start node service with node mongo.js
+In terminal, navigate to mongoNode and start node service with "node mongo.js"
 
 In another terminal enter "ionic serve" 
 
