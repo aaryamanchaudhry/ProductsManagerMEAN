@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+    <h1 style="text-align: center; color:black;">  Home </h1>
+    </ion-title>
+  </ion-toolbar>
+
+<ion-content [fullscreen]="true">
+  
+
+  <ion-text color="primary">
+    <h1 style="text-align: center;"> Greetings ! </h1>
+   
+  </ion-text>
+  <h3 style="text-align: center;"> This app is developed by Aaryaman </h3>
+  
+  <section style="text-align: center;">
+    <ion-input placeholder="Enter Database Name" color="primary" [(ngModel)]="datab" name="Database"></ion-input>
+     <ion-input placeholder="Enter Collection Name" color="primary" [(ngModel)]="collection" name="Collection"></ion-input>
+ 
+     
+     <ion-button type="submit" (click)="createDatabase()">Create Database</ion-button>
+
+    <ion-button type="submit" (click)="insert()">Fill Database</ion-button>
+   
+    <ion-button type="submit" (click)="retrieve()">Load Products Now</ion-button>
+  
+    {{outMsg}}
+ 
+
+    <li *ngFor="let i of outRec">{{i.pdesc}} </li>
+  </section>
+  
+</ion-content>

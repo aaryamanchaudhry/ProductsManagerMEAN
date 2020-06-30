@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+    <h1 style="text-align: center; color:black;">  Add Product  </h1>
+    </ion-title>
+  </ion-toolbar>
+
+<ion-content fullscreen >
+  <ion-card style="background: rgb(251, 255, 0);">
+    <ion-card-header>
+     
+      <ion-card-title>New Product</ion-card-title>
+   
+    </ion-card-header>
+    <ion-card-content>
+      <h4>Enter ID: </h4> <input  [(ngModel)]='id' />
+      <h4>Enter Description: </h4> <input required [(ngModel)]='desc'/>
+      <h4>Enter Price: </h4> <input type="number" required min="1" value="0" step=".01" [(ngModel)]='price' />
+      <h4>Enter Quantity : </h4> <input type="number" required pattern="[0-9]" [(ngModel)]='quantity' />
+      <h4>Enter Reorder Quantity: </h4> <input  type="number" required pattern="[0-9]" [(ngModel)]='reorder' />
+    <br>
+      <ion-button expand="block" (click)=" insertNew();"> Add Product </ion-button>
+      {{outMsg}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

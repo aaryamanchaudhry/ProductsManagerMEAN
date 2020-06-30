@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+    <h1 style="text-align: center; color:black;">  Product Display </h1>
+    </ion-title>
+  </ion-toolbar>
+
+<ion-content  style="--background: rgb(171, 6, 221);" fullscreen>
+
+  <ion-list>
+  
+    
+
+    <ion-item style="--background: rgb(231, 227, 229);" *ngFor="let i of outRec"  >
+
+      <table>
+      <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Reorder Quantity</th>
+      </tr>
+      <tr>
+        <td>{{i.pid}}</td>
+        <td>{{i.pdesc}}</td>
+        <td>{{i.pqty}}</td>
+        <td>${{i.pprice}}</td>
+        <td>{{i.preqty}}</td>
+        </tr>
+    </table>
+
+
+
+    </ion-item>
+  </ion-list>
+
+
+
+</ion-content>

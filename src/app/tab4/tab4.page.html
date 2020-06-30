@@ -1,0 +1,36 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+    <h1 style="text-align: center; color:black;">  Edit Page </h1>
+    </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen style="--background: black;">
+  <button ion-button icon-only clear (click)="  deleteAll()">
+    <h4>Delete Table/Collection</h4>
+         </button>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let i of outRec ;let j = index;" size="6" >
+        <ion-card style="background: rgb(108, 224, 205);" >
+          <ion-card-header>
+            <ion-card-subtitle>{{i.pid}}</ion-card-subtitle>
+            <ion-card-title>{{i.pdesc}}</ion-card-title>
+            <button ion-button icon-only clear (click)="  retrievewithquery(j+1); presentActionSheet()">
+              <ion-icon name="pencil-outline"></ion-icon> Edit
+            </button>
+          </ion-card-header>
+          <ion-card-content>
+            <h4>Price: {{i.pprice}}</h4>
+            <h4>Quantity : {{i.pqty}}</h4>
+            <h4>Reorder Quantity: {{i.preqty}}</h4>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
